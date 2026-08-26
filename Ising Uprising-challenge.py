@@ -1,26 +1,3 @@
-'''
-Consider a spin chain contains particles of spin  in each of its  sites. The spins may be pointing in the positive or negative  direction, and we consider that there may be an external magnetic field acting on the system.
-
-drawing Such a quantum system is described by the Transverse Ising Hamiltonian. For closed spin chain with a transverse magnetic field of intensity , the Transverse Ising Hamiltonian reads
-
-The subindices  indicate the spin site where the operators act. In a closed spin chain, we identify site  with the first site.
-
-In this challenge, we calculate the effect of external magnetic forces on the ground energy. Using the Variational Quantum Eigensolver (VQE) algorithm, we will compute the ground energy of a closed spin chain of length .
-
-In this challenge you will be given the following functions:
-
-create_Hamiltonian: In which you build the Transverse Ising Hamiltonian for  and a magnetic field intensity h. You must complete this function.
-model: This QNode builds a general enough ansatz for the ground state. This circuit must depend on some parameters params, which you will later optimize. It returns the expectation value of the Hamiltonian for the output state of the circuit. You must complete this function.
-train: This function returns the parameters that minimize the output of model. You must complete this function.
-Input
-
-As input to this problem, you are given:
-
-h (float): The intensity of the magnetic field applied to the spin chain.
-Output
-
-This code will output a float corresponding to the energy of the ground state.
-'''
 import json
 import pennylane as qp
 import pennylane.numpy as np
